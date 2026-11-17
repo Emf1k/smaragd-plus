@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Смарагд Плюс — ворота, ролети, металоконструкції в Луцьку</title>
+<meta name="description" content="ПП «Смарагд Плюс», Луцьк: відкатні, розпашні та гаражні секційні ворота, захисні ролети, автоматика, шлагбауми, металоконструкції на замовлення. Продаж і монтаж з 2008 року.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#121314">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#121314; --bg2:#18191b; --card:#1d1f21; --line:#2e3134;
+  --text:#eef3f0; --muted:#a3a8ad;
+  --em:#f6921e; --em-dark:#b8650a; --em-ink:#2a1500;
+  --steel:#cfd3d6;
+  --r:14px; --wrap:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-tap-highlight-color:transparent;padding-bottom:env(safe-area-inset-bottom)}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(26px,4vw,40px);font-weight:700}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:clamp(56px,9vw,104px) 0;scroll-margin-top:64px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--em);margin-bottom:14px}
+.lead{color:var(--muted);max-width:60ch;margin-top:14px}
+:focus-visible{outline:2px solid var(--em);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .15s ease,background .2s ease,border-color .2s ease;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn-main{background:var(--em);color:var(--em-ink)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--text)}
+@media (hover:hover){.btn-main:hover{background:#ffab4a}.btn-ghost:hover{border-color:var(--em)}}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(18,19,20,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Unbounded,sans-serif;font-weight:700;font-size:17px;white-space:nowrap}
+.logo svg{width:38px;height:29px}
+.logo b{color:var(--em);font-weight:700}
+nav{display:flex;gap:26px;font-size:15px;font-weight:500;color:var(--muted)}
+@media (hover:hover){nav a:hover{color:var(--text)}}
+.bar-tel{font-weight:700;white-space:nowrap}
+@media (max-width:860px){nav{display:none}}
+@media (max-width:420px){.bar-tel{font-size:15px}.logo{font-size:15px}}
+
+/* hero */
+.hero{padding-top:clamp(40px,7vw,84px);padding-bottom:clamp(48px,7vw,88px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+h1{font-size:clamp(32px,5.4vw,58px);font-weight:700}
+h1 em{font-style:normal;color:var(--em)}
+.hero p:not(.eyebrow){color:var(--muted);font-size:clamp(17px,1.6vw,19px);max-width:52ch;margin-top:20px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}
+.facts div{font-size:14px;color:var(--muted)}
+.facts strong{display:block;font-family:Unbounded,sans-serif;font-size:22px;color:var(--text);font-weight:700}
+.gate{background:linear-gradient(180deg,#1c1e20,#131415);border:1px solid var(--line);border-radius:22px;padding:18px}
+.gate svg{width:100%;height:auto}
+.leaf{animation:slide 9s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes slide{0%,12%{transform:translateX(0)}45%,62%{transform:translateX(196px)}95%,100%{transform:translateX(0)}}
+.lamp{animation:blink 9s steps(1) infinite}
+@keyframes blink{0%,12%{opacity:.25}13%,44%{opacity:1}45%,62%{opacity:.25}63%,94%{opacity:1}95%,100%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.leaf,.lamp{animation:none}html{scroll-behavior:auto}}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:34px}}
+
+/* products */
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s ease,transform .2s ease}
+@media (hover:hover){.card:hover{border-color:var(--em-dark);transform:translateY(-3px)}}
+.card svg{width:40px;height:40px;stroke:var(--em);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px}
+.card h3{font-size:18px;font-weight:500}
+.card p{color:var(--muted);font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+.tags span{font-size:12.5px;font-weight:600;color:var(--steel);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+.card.wide{grid-column:span 2}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}.card.wide{grid-column:auto}}
+
+/* why */
+.why{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.why ul{list-style:none;display:grid;gap:0}
+.why li{display:grid;grid-template-columns:54px 1fr;gap:6px 14px;padding:22px 0;border-bottom:1px solid var(--line)}
+.why li:first-child{padding-top:0}
+.why li i{font:700 15px Unbounded,sans-serif;color:var(--em);font-style:normal;padding-top:4px}
+.why li h3{font-size:18px;font-weight:500}
+.why li p{grid-column:2;color:var(--muted);font-size:16px}
+@media (max-width:860px){.why{grid-template-columns:1fr;gap:34px}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;counter-reset:s}
+.step{border-top:2px solid var(--em-dark);padding-top:18px;counter-increment:s}
+.step::before{content:"0" counter(s);font:700 14px Unbounded,sans-serif;color:var(--em)}
+.step h3{font-size:17px;font-weight:500;margin:10px 0 6px}
+.step p{color:var(--muted);font-size:15.5px}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,1fr);gap:28px 16px}}
+@media (max-width:460px){.steps{grid-template-columns:1fr}}
+
+/* works */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:36px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--card)}
+.gallery:empty{display:none}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+.vid{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s ease,transform .2s ease}
+.vid img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.vid div{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vid span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--em)}
+.vid h3{font-size:15px;font-weight:500}
+.vid b{margin-top:auto;padding-top:4px;font-size:14px;color:var(--muted);font-weight:600}
+@media (hover:hover){.vid:hover{border-color:var(--em-dark);transform:translateY(-3px)}.vid:hover b{color:var(--text)}}
+@media (max-width:1000px){.vids{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.vids{grid-template-columns:1fr}}
+.social{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.social:empty{display:none}
+
+/* contacts */
+.contacts{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;margin-top:40px}
+.cbox{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:grid;gap:22px;align-content:start}
+.cbox dt{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.cbox dd a.tel{display:block;font:700 clamp(20px,2.6vw,26px) Unbounded,sans-serif;padding:4px 0}
+@media (hover:hover){.cbox dd a:hover{color:var(--em)}}
+.map{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;min-height:380px;background:var(--card)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:grayscale(.3) contrast(1.05)}
+@media (max-width:860px){.contacts{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:28px 0 96px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media (min-width:761px){footer{padding-bottom:28px}}
+
+/* mobile call bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;display:none}
+.callbar .btn{width:100%;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+@media (max-width:760px){.callbar{display:block}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Смарагд Плюс — на початок">
+      <svg viewBox="210 115 480 362" aria-hidden="true"><path fill="#f08307" d="M220 265 378 140l40 25-90 78v217H220z"/><path fill="#f08307" d="M358 270 523 122l157 148v200H455V302h133v86h-38v-48h-58v92h151V287L523 172 395 287v181h-37z"/></svg>
+      Смарагд&nbsp;<b>Плюс</b>
+    </a>
+    <nav aria-label="Основне меню">
+      <a href="#products">Продукція</a>
+      <a href="#why">Чому ми</a>
+      <a href="#steps">Як працюємо</a>
+      <a href="#works">Роботи</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <a class="bar-tel" href="tel:+380505839535">050 583-95-35</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Луцьк і Волинська область</p>
+      <h1>Ворота, <em>навіси для авто</em> та вироби з металу</h1>
+      <p>Виготовляємо і встановлюємо відкатні та гаражні ворота, накриття для авто, огорожі й металоконструкції. Ставимо автоматику, ролети та шлагбауми. Досвід, набутий практикою.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="tel:+380505839535">Подзвонити й порахувати</a>
+        <a class="btn btn-ghost" href="#products">Що ми робимо</a>
+      </div>
+      <div class="facts">
+        <div><strong>з 2008</strong>року на ринку</div>
+        <div><strong>до 6×10 м</strong>навіси для авто</div>
+        <div><strong>Пн–Пт</strong>9:00–19:00</div>
+      </div>
+    </div>
+
+    <div class="gate" aria-hidden="true">
+      <svg viewBox="0 0 600 380">
+        <defs>
+          <clipPath id="open"><rect x="96" y="60" width="408" height="270"/></clipPath>
+          <linearGradient id="slat" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#474b4f"/><stop offset="1" stop-color="#2d3033"/></linearGradient>
+        </defs>
+        <!-- будинок на фоні -->
+        <path d="M190 210 300 130l110 80v110H190z" fill="#202224" stroke="#34383b" stroke-width="2"/>
+        <rect x="278" y="250" width="44" height="70" fill="#18191b" stroke="#34383b" stroke-width="2"/>
+        <rect x="220" y="226" width="36" height="32" fill="#f6921e" opacity=".18"/>
+        <rect x="344" y="226" width="36" height="32" fill="#f6921e" opacity=".18"/>
+        <!-- земля та рейка -->
+        <rect x="0" y="330" width="600" height="50" fill="#151617"/>
+        <rect x="60" y="326" width="520" height="5" rx="2" fill="#5a5f63"/>
+        <!-- стулка -->
+        <g clip-path="url(#open)">
+          <g class="leaf">
+            <rect x="100" y="96" width="250" height="228" rx="4" fill="#1c1e20" stroke="#666c70" stroke-width="3"/>
+            <g fill="url(#slat)">
+              <rect x="110" y="106" width="230" height="20" rx="2"/><rect x="110" y="132" width="230" height="20" rx="2"/>
+              <rect x="110" y="158" width="230" height="20" rx="2"/><rect x="110" y="184" width="230" height="20" rx="2"/>
+              <rect x="110" y="210" width="230" height="20" rx="2"/><rect x="110" y="236" width="230" height="20" rx="2"/>
+              <rect x="110" y="262" width="230" height="20" rx="2"/><rect x="110" y="288" width="230" height="20" rx="2"/>
+            </g>
+          </g>
+        </g>
+        <!-- нерухома секція паркану -->
+        <rect x="350" y="96" width="154" height="228" rx="4" fill="#1c1e20" stroke="#666c70" stroke-width="3"/>
+        <g fill="url(#slat)">
+          <rect x="360" y="106" width="134" height="20" rx="2"/><rect x="360" y="132" width="134" height="20" rx="2"/>
+          <rect x="360" y="158" width="134" height="20" rx="2"/><rect x="360" y="184" width="134" height="20" rx="2"/>
+          <rect x="360" y="210" width="134" height="20" rx="2"/><rect x="360" y="236" width="134" height="20" rx="2"/>
+          <rect x="360" y="262" width="134" height="20" rx="2"/><rect x="360" y="288" width="134" height="20" rx="2"/>
+        </g>
+        <!-- стовпи -->
+        <rect x="60" y="70" width="40" height="260" rx="3" fill="#303336" stroke="#666c70" stroke-width="2"/>
+        <rect x="54" y="60" width="52" height="14" rx="3" fill="#666c70"/>
+        <rect x="500" y="70" width="40" height="260" rx="3" fill="#303336" stroke="#666c70" stroke-width="2"/>
+        <rect x="494" y="60" width="52" height="14" rx="3" fill="#666c70"/>
+        <!-- сигнальна лампа і привід -->
+        <circle class="lamp" cx="80" cy="50" r="9" fill="#f6921e"/>
+        <rect x="508" y="296" width="24" height="30" rx="3" fill="#f6921e"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Продукція і послуги</p>
+    <h2>Усе для в'їзду, гаража та подвір'я</h2>
+    <p class="lead">Продаж і монтаж в одних руках: заміряємо, привозимо, встановлюємо й налаштовуємо.</p>
+
+    <div class="grid">
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M4 32h32M7 32V10h18v22M11 15h10M11 20h10M11 25h10M29 10v22M33 10v22M27 21h8"/></svg>
+        <h3>В'їзні ворота</h3>
+        <p>Відкатні та розпашні ворота з хвірткою і секціями огорожі в одному стилі. Ангарні — для складів і виробництв.</p>
+        <div class="tags"><span>відкатні</span><span>розпашні</span><span>хвіртки</span><span>ангарні</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M3 14 20 8l17 6M7 13v21M33 13v21M11 30h18l-2-6H13zM14 33v1M26 33v1"/></svg>
+        <h3>Навіси для авто</h3>
+        <p>Наш головний напрям. Варимо каркас у цеху, привозимо і збираємо на місці — на одну чи кілька машин.</p>
+        <div class="tags"><span>накриття для авто</span><span>до 6×10 м</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M5 34V14L20 6l15 8v20M10 34V18h20v16M10 23h20M10 28h20"/></svg>
+        <h3>Гаражні секційні ворота</h3>
+        <p>Піднімаються під стелю і не займають місця перед гаражем. Працюємо з перевіреними заводами.</p>
+        <div class="tags"><span>RYTERNA</span><span>GANT</span><span>ALUTECH</span><span>DOORHAN</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><rect x="7" y="6" width="26" height="6" rx="1.5"/><path d="M9 12v22h22V12M9 17h22M9 22h22M9 27h22"/></svg>
+        <h3>Захисні ролети</h3>
+        <p>Закривають від зламу, сонця та сторонніх очей. Ставимо на вікна, двері та гаражі.</p>
+        <div class="tags"><span>вікна</span><span>двері</span><span>гаражі</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M6 34V20h7v14M9.500 20v-6M13 24h23M17 24v3M22 24v3M27 24v3M32 24v3"/><circle cx="9.500" cy="11" r="3"/></svg>
+        <h3>Автоматика і шлагбауми</h3>
+        <p>Приводи для нових і вже встановлених воріт, відкривання з пульта. Шлагбауми для дворів і парковок.</p>
+        <div class="tags"><span>CAME</span><span>приводи</span><span>шлагбауми</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M4 16 20 7l16 9M8 15v19M32 15v19M8 22h24M14 22v12M20 22v12M26 22v12"/></svg>
+        <h3>Металоконструкції на замовлення</h3>
+        <p>Робимо за вашими розмірами: накриття для літнього кафе, павільйони, каркаси під сходи, перила, огорожі, дашки, решітки, мангали.</p>
+        <div class="tags"><span>перила</span><span>огорожі</span><span>дашки</span><span>решітки</span><span>мангали</span><span>павільйони</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M10 35V5h20v30M6 35h28"/><circle cx="25" cy="21" r="1.300"/><path d="M15 10h10v6H15z"/></svg>
+        <h3>Вхідні двері</h3>
+        <p>Металеві двері власного виробництва та заводські протипожежні.</p>
+        <div class="tags"><span>власне виробництво</span><span>протипожежні</span></div>
+      </article>
+      <article class="card">
+        <svg viewBox="0 0 40 40"><path d="M5 12h20l8 5-8 5H5zM12 22v8h10M27 30h6"/><circle cx="11" cy="17" r="2"/></svg>
+        <h3>Системи безпеки</h3>
+        <p>Домофони, відеонагляд і сигналізації — щоб бачити, хто біля воріт, і спати спокійно.</p>
+        <div class="tags"><span>домофони</span><span>відеонагляд</span><span>сигналізації</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap why">
+    <div>
+      <p class="eyebrow">Чому ми</p>
+      <h2>Робимо так, щоб не переробляти</h2>
+      <p class="lead">«Смарагд Плюс» — сімейне підприємство з Луцька. Дбаємо про затишок, комфорт і безпеку вашої оселі з 2008 року.</p>
+    </div>
+    <ul>
+      <li><i>01</i><h3>Ціни без посередників</h3><p>Працюємо напряму із заводами-виробниками, тому не накручуємо зайвого.</p></li>
+      <li><i>02</i><h3>Сертифікована продукція</h3><p>Ставимо лише те, в чому впевнені: ворота, ролети й автоматику відомих виробників.</p></li>
+      <li><i>03</i><h3>Досвідчені монтажники</h3><p>Наші майстри знають нюанси роботи на різних ґрунтах і рельєфі — ворота не просядуть і не перекосяться.</p></li>
+      <li><i>04</i><h3>Індивідуальний підхід</h3><p>Кожен проєкт рахуємо окремо — під ваші розміри, побажання та бюджет.</p></li>
+      <li><i>05</i><h3>Відповідаємо за результат</h3><p>Нові послуги пропонуємо лише після того, як навчили персонал і перевірили все на практиці.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="steps" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Як працюємо</p>
+    <h2>Від дзвінка до готових воріт</h2>
+    <div class="steps">
+      <div class="step"><h3>Дзвінок</h3><p>Розповідаєте, що потрібно. Підказуємо варіанти й орієнтовну ціну.</p></div>
+      <div class="step"><h3>Замір</h3><p>Майстер приїжджає на об'єкт, знімає розміри й оцінює умови монтажу.</p></div>
+      <div class="step"><h3>Прорахунок</h3><p>Отримуєте точну вартість і терміни. Узгоджуємо матеріали та вигляд.</p></div>
+      <div class="step"><h3>Монтаж</h3><p>Привозимо, встановлюємо, налаштовуємо автоматику й показуємо, як користуватись.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <p class="eyebrow">Наші роботи</p>
+    <h2>Подивіться, як це виглядає наживо</h2>
+    <p class="lead" id="works-lead">Знімаємо процес і готові об'єкти в TikTok — без прикрас, як є. Ось кілька останніх робіт.</p>
+    <div class="vids">
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7658289427743034641" target="_blank" rel="noopener"><img src="photos/w1.jpg" alt="Відкатні ворота з хвірткою та огорожею" width="800" height="600" loading="lazy"><div><span>Ворота</span><h3>Відкатні ворота, хвіртка та секції огорожі</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7638950071312092432" target="_blank" rel="noopener"><img src="photos/w3.jpg" alt="Навіс для авто 6 на 10 метрів біля будинку" width="800" height="600" loading="lazy"><div><span>Навіс</span><h3>Накриття для авто 6×10 метрів</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7640115546607897857" target="_blank" rel="noopener"><img src="photos/w4.jpg" alt="Коричневі гаражні ворота RYTERNA з хвірткою" width="800" height="600" loading="lazy"><div><span>Гараж</span><h3>Гаражні ворота RYTERNA (Литва)</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7655678428770831632" target="_blank" rel="noopener"><img src="photos/w7.jpg" alt="Темні ворота та огорожа біля приватного будинку" width="800" height="600" loading="lazy"><div><span>Ворота</span><h3>Ворота й огорожа біля будинку</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7661988070098472208" target="_blank" rel="noopener"><img src="photos/w2.jpg" alt="Монтаж каркаса навісу для авто на подвір'ї" width="800" height="600" loading="lazy"><div><span>Навіс</span><h3>Як ми виготовляємо навіс для авто</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7668687987869371649" target="_blank" rel="noopener"><img src="photos/w6.jpg" alt="Металевий каркас навісу зблизька" width="800" height="600" loading="lazy"><div><span>Навіс</span><h3>Навіс для авто — майже готово</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7667500920086760721" target="_blank" rel="noopener"><img src="photos/w5.jpg" alt="Майстри варять металевий каркас у цеху" width="800" height="600" loading="lazy"><div><span>Метал</span><h3>Металоконструкція: зварювання в цеху</h3><b>Дивитись відео →</b></div></a>
+      <a class="vid" href="https://www.tiktok.com/@vorota.lutsk/video/7649043128854252801" target="_blank" rel="noopener"><img src="photos/w8.jpg" alt="Готові секції металевої огорожі" width="800" height="600" loading="lazy"><div><span>Огорожа</span><h3>Секції огорожі перед монтажем</h3><b>Дивитись відео →</b></div></a>
+    </div>
+    <div class="social" id="social"></div>
+  </div>
+</section>
+
+<section id="contacts" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Контакти</p>
+    <h2>Подзвоніть — порахуємо ваш проєкт</h2>
+    <div class="contacts">
+      <dl class="cbox">
+        <div><dt>Телефони</dt>
+          <dd><a class="tel" href="tel:+380505839535">+38 (050) 583-95-35</a><a class="tel" href="tel:+380969595130">+38 (096) 959-51-30</a></dd></div>
+        <div><dt>Адреса</dt><dd>м. Луцьк, вул. Ковельська, 7</dd></div>
+        <div><dt>Графік роботи</dt><dd>Пн–Пт: 9:00–19:00<br>Сб, Нд: вихідний</dd></div>
+        <div><dt>Пошта</dt><dd><a href="mailto:smaragd.vorota@gmail.com">smaragd.vorota@gmail.com</a></dd></div>
+        <a class="btn btn-main" href="tel:+380505839535">Подзвонити</a>
+      </dl>
+      <div class="map">
+        <iframe title="Смарагд Плюс на карті: Луцьк, вул. Ковельська, 7" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=%D0%9B%D1%83%D1%86%D1%8C%D0%BA%2C%20%D0%B2%D1%83%D0%BB.%20%D0%9A%D0%BE%D0%B2%D0%B5%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0%2C%207&z=16&hl=uk&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> ПП «Смарагд Плюс». Ворота, ролети, автоматика, металоконструкції.</span>
+    <span>м. Луцьк, вул. Ковельська, 7</span>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-main" href="tel:+380505839535">Подзвонити: 050 583-95-35</a></div>
+
+<script>
+/* ===== НАЛАШТУВАННЯ: впишіть сюди свої посилання ===== */
+const SOCIAL = {
+  instagram: "",   // наприклад "https://www.instagram.com/ваш_нік/"
+  tiktok: "https://www.tiktok.com/@vorota.lutsk"       // наприклад "https://www.tiktok.com/@ваш_нік"
+};
+/* ====================================================================== */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const social = document.getElementById("social");
+[["instagram", "Ми в Instagram"], ["tiktok", "Ми в TikTok"]].forEach(([key, label]) => {
+  if (!SOCIAL[key]) return;
+  const a = document.createElement("a");
+  a.className = "btn btn-ghost"; a.href = SOCIAL[key]; a.target = "_blank"; a.rel = "noopener";
+  a.textContent = label;
+  social.appendChild(a);
+});
+
+</script>
+</body>
+</html>
