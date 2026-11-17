@@ -136,6 +136,23 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 /* mobile call bar */
 .callbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;display:none}
 .callbar .btn{width:100%;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+
+/* call dialog (desktop) */
+.calldlg{border:1px solid var(--line);border-radius:20px;background:var(--card);color:var(--text);padding:28px;width:min(420px,calc(100% - 32px));margin:auto;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.calldlg::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(3px)}
+.calldlg[open]{animation:pop .18s ease-out}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.calldlg h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.calldlg>p{color:var(--muted);font-size:15px;margin-bottom:20px}
+.calldlg .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.calldlg .num{font:700 20px Unbounded,sans-serif;white-space:nowrap}
+.calldlg .copy{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:none;color:var(--text);font:600 14px Manrope,sans-serif;cursor:pointer;white-space:nowrap}
+.calldlg .copy.ok{border-color:var(--em);color:var(--em)}
+@media (hover:hover){.calldlg .copy:hover{border-color:var(--em)}}
+.calldlg .hours{color:var(--muted);font-size:14px;padding-top:14px;border-top:1px solid var(--line)}
+.calldlg .x{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:0;background:none;color:var(--muted);font-size:24px;line-height:1;cursor:pointer}
+.calldlg .x:hover{color:var(--text)}
+@media (prefers-reduced-motion:reduce){.calldlg[open]{animation:none}}
 @media (max-width:760px){.callbar{display:block}}
 </style>
 </head>
@@ -364,6 +381,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 
 <div class="callbar"><a class="btn btn-main" href="tel:+380505839535">Подзвонити: 050 583-95-35</a></div>
 
+<dialog class="calldlg" id="calldlg" aria-labelledby="calldlg-t">
+  <button class="x" type="button" aria-label="Закрити">×</button>
+  <h3 id="calldlg-t">Зателефонуйте нам</h3>
+  <p>Розкажемо про варіанти й порахуємо вартість вашого проєкту.</p>
+  <div class="row"><span class="num">050 583-95-35</span><button class="copy" type="button" data-num="0505839535">Скопіювати</button></div>
+  <div class="row"><span class="num">096 959-51-30</span><button class="copy" type="button" data-num="0969595130">Скопіювати</button></div>
+  <div class="hours">Пн–Пт: 9:00–19:00 · Сб, Нд: вихідний</div>
+</dialog>
+
 <script>
 /* ===== НАЛАШТУВАННЯ: впишіть сюди свої посилання ===== */
 const SOCIAL = {
@@ -383,6 +409,23 @@ const social = document.getElementById("social");
   social.appendChild(a);
 });
 
+/* На ПК подзвонити через tel: нема чим — показуємо віконце з номерами. На телефоні дзвонить одразу. */
+const dlg = document.getElementById("calldlg");
+const isPhone = matchMedia("(pointer: coarse)").matches;
+if (!isPhone && dlg.showModal) {
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => a.addEventListener("click", e => {
+    e.preventDefault();
+    dlg.showModal();
+  }));
+  dlg.querySelector(".x").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  dlg.querySelectorAll(".copy").forEach(b => b.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(b.dataset.num); }
+    catch { const t = document.createElement("textarea"); t.value = b.dataset.num; document.body.appendChild(t); t.select(); document.execCommand("copy"); t.remove(); }
+    b.textContent = "Скопійовано ✓"; b.classList.add("ok");
+    setTimeout(() => { b.textContent = "Скопіювати"; b.classList.remove("ok"); }, 2000);
+  }));
+}
 </script>
 </body>
 </html>
